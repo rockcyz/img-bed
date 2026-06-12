@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+  <defs>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#444c56" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#444c56" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="520" rx="8" fill="#2d333b"/>
+
+  <!-- title -->
+  <text x="450" y="36" text-anchor="middle" fill="#cdd9e5" font-size="16" font-weight="bold">cwnd Evolution: Reno vs CUBIC vs BBR</text>
+
+  <!-- axes -->
+  <line x1="80" y1="60" x2="80" y2="440" stroke="#444c56" stroke-width="1.5"/>
+  <line x1="80" y1="440" x2="860" y2="440" stroke="#444c56" stroke-width="1.5"/>
+
+  <!-- Y axis label -->
+  <text x="24" y="250" text-anchor="middle" fill="#768390" font-size="12" transform="rotate(-90,24,250)">cwnd (segments)</text>
+
+  <!-- X axis label -->
+  <text x="470" y="478" text-anchor="middle" fill="#768390" font-size="12">Time (RTTs)</text>
+
+  <!-- Y grid lines and labels -->
+  <line x1="80" y1="402" x2="860" y2="402" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="406" text-anchor="end" fill="#768390" font-size="11">10</text>
+
+  <line x1="80" y1="364" x2="860" y2="364" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="368" text-anchor="end" fill="#768390" font-size="11">20</text>
+
+  <line x1="80" y1="326" x2="860" y2="326" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="330" text-anchor="end" fill="#768390" font-size="11">30</text>
+
+  <line x1="80" y1="288" x2="860" y2="288" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="292" text-anchor="end" fill="#768390" font-size="11">40</text>
+
+  <line x1="80" y1="250" x2="860" y2="250" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="254" text-anchor="end" fill="#768390" font-size="11">50</text>
+
+  <line x1="80" y1="212" x2="860" y2="212" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="216" text-anchor="end" fill="#768390" font-size="11">60</text>
+
+  <line x1="80" y1="174" x2="860" y2="174" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="178" text-anchor="end" fill="#768390" font-size="11">70</text>
+
+  <line x1="80" y1="136" x2="860" y2="136" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="140" text-anchor="end" fill="#768390" font-size="11">80</text>
+
+  <line x1="80" y1="98" x2="860" y2="98" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="102" text-anchor="end" fill="#768390" font-size="11">90</text>
+
+  <line x1="80" y1="60" x2="860" y2="60" stroke="url(#gridFade)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="72" y="64" text-anchor="end" fill="#768390" font-size="11">100</text>
+
+  <!-- X axis tick labels -->
+  <text x="80"  y="458" text-anchor="middle" fill="#768390" font-size="11">0</text>
+  <text x="158" y="458" text-anchor="middle" fill="#768390" font-size="11">10</text>
+  <text x="236" y="458" text-anchor="middle" fill="#768390" font-size="11">20</text>
+  <text x="314" y="458" text-anchor="middle" fill="#768390" font-size="11">30</text>
+  <text x="392" y="458" text-anchor="middle" fill="#768390" font-size="11">40</text>
+  <text x="470" y="458" text-anchor="middle" fill="#768390" font-size="11">50</text>
+  <text x="548" y="458" text-anchor="middle" fill="#768390" font-size="11">60</text>
+  <text x="626" y="458" text-anchor="middle" fill="#768390" font-size="11">70</text>
+  <text x="704" y="458" text-anchor="middle" fill="#768390" font-size="11">80</text>
+  <text x="782" y="458" text-anchor="middle" fill="#768390" font-size="11">90</text>
+  <text x="860" y="458" text-anchor="middle" fill="#768390" font-size="11">100</text>
+
+  <!-- loss event markers -->
+  <line x1="314" y1="60" x2="314" y2="440" stroke="#f85149" stroke-width="0.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="314" y="54" text-anchor="middle" fill="#f85149" font-size="10" opacity="0.8">loss</text>
+
+  <line x1="548" y1="60" x2="548" y2="440" stroke="#f85149" stroke-width="0.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="548" y="54" text-anchor="middle" fill="#f85149" font-size="10" opacity="0.8">loss</text>
+
+  <line x1="782" y1="60" x2="782" y2="440" stroke="#f85149" stroke-width="0.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="782" y="54" text-anchor="middle" fill="#f85149" font-size="10" opacity="0.8">loss</text>
+
+  <!-- TCP Reno (blue #388bfd): classic sawtooth -->
+  <polyline fill="none" stroke="#388bfd" stroke-width="2.2" stroke-linejoin="round"
+    points="
+      80,440
+      88,421  95,402  103,383  110,364  118,345  126,326  133,307  141,288  148,269  158,250
+      165,231  173,212  180,193  188,174  195,155  203,136  211,117  218,98   226,83   236,72
+      244,68   251,64   259,60   267,68   274,72   282,76   290,80   297,83   305,87   314,91
+      314,250
+      322,245  329,240  337,235  345,230  353,225  360,220  368,215  376,210  384,205  392,200
+      399,195  407,190  415,185  422,180  430,175  438,170  446,165  453,160  461,155  470,150
+      477,145  485,140  493,135  500,130  508,125  516,120  524,115  531,110  539,105  548,100
+      548,255
+      556,250  563,245  571,240  579,235  586,230  594,225  602,220  610,215  617,210  626,205
+      633,200  641,195  648,190  656,185  664,180  672,175  679,170  687,165  695,160  704,155
+      711,150  719,145  727,140  734,135  742,130  750,125  758,120  765,115  773,110  782,105
+      782,240
+      790,235  797,230  805,225  813,220  820,215  828,210  836,205  843,200  851,195  860,190
+    "/>
+
+  <!-- TCP CUBIC (green #3fb950): flattened cubic curve -->
+  <polyline fill="none" stroke="#3fb950" stroke-width="2.2" stroke-linejoin="round"
+    points="
+      80,440
+      88,421  95,402  103,383  110,364  118,345  126,326  133,307  141,288  148,269  158,250
+      165,231  173,212  180,193  188,174  195,155  203,140  211,128  218,118  226,110  236,105
+      244,100  251,96   259,93   267,91   274,90   282,89   290,88   297,87   305,86   314,85
+      314,230
+      322,218  329,208  337,200  345,194  353,189  360,186  368,183  376,181  384,179  392,178
+      399,177  407,176  415,174  422,172  430,169  438,166  446,162  453,158  461,153  470,147
+      477,141  485,134  493,127  500,120  508,113  516,106  524,100  531,95   539,91   548,88
+      548,230
+      556,218  563,208  571,200  579,194  586,189  594,186  602,183  610,181  617,179  626,178
+      633,177  641,176  648,174  656,172  664,169  672,166  679,162  687,158  695,153  704,147
+      711,141  719,134  727,127  734,120  742,113  750,106  758,100  765,95   773,91   782,88
+      782,230
+      790,218  797,208  805,200  813,194  820,189  828,186  836,183  843,181  851,179  860,178
+    "/>
+
+  <!-- BBR (orange #f0883e): bandwidth-probing plateau -->
+  <polyline fill="none" stroke="#f0883e" stroke-width="2.2" stroke-linejoin="round"
+    points="
+      80,440
+      88,421  95,402  103,383  110,364  118,345  126,326  133,307  141,288  148,269  158,250
+      165,231  173,212  180,200  188,190  195,182  203,176  211,172  218,170  226,168  236,166
+      244,168  251,166  259,168  267,166  274,168  282,166  290,168  297,166  305,168  314,166
+      322,168  329,166  337,168  345,166  353,168  360,166  368,168  376,166  384,168  392,166
+      399,168  407,166  415,168  422,166  430,168  438,166  446,168  453,166  461,168  470,166
+      477,168  485,166  493,168  500,166  508,168  516,166  524,168  531,166  539,168  548,166
+      548,380
+      556,340  563,310  571,285  579,265  586,250  594,238  602,228  610,220  617,214  626,209
+      633,205  641,200  648,196  656,192  664,188  672,185  679,182  687,180  695,178  704,176
+      711,174  719,172  727,170  734,168  742,166  750,168  758,166  765,168  773,166  782,168
+      782,380
+      790,340  797,310  805,285  813,265  820,250  828,240  836,232  843,225  851,220  860,216
+    "/>
+
+  <!-- BBRv3 (purple #a371f7): smoother probing -->
+  <polyline fill="none" stroke="#a371f7" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="8,3"
+    points="
+      80,440
+      88,421  95,402  103,383  110,364  118,345  126,326  133,307  141,288  148,269  158,250
+      165,231  173,216  180,204  188,194  195,186  203,180  211,176  218,173  226,171  236,169
+      244,170  251,169  259,170  267,169  274,170  282,169  290,170  297,169  305,170  314,169
+      322,170  329,169  337,170  345,169  353,170  360,169  368,170  376,169  384,170  392,169
+      399,170  407,169  415,170  422,169  430,170  438,169  446,170  453,169  461,170  470,169
+      477,170  485,169  493,170  500,169  508,170  516,169  524,170  531,169  539,170  548,169
+      548,310
+      556,285  563,268  571,254  579,242  586,233  594,226  602,220  610,216  617,212  626,209
+      633,206  641,203  648,200  656,197  664,194  672,191  679,188  687,185  695,182  704,179
+      711,177  719,175  727,173  734,171  742,170  750,169  758,170  765,169  773,170  782,169
+      782,310
+      790,285  797,268  805,254  813,242  820,233  828,226  836,220  843,216  851,212  860,209
+    "/>
+
+  <!-- probe_rtt annotation for BBR -->
+  <rect x="540" y="372" width="20" height="16" rx="2" fill="#f0883e" opacity="0.25"/>
+  <text x="572" y="385" fill="#f0883e" font-size="10">probe_rtt</text>
+
+  <!-- legend -->
+  <rect x="110" y="488" width="680" height="26" rx="4" fill="#2d333b" stroke="#444c56" stroke-width="1"/>
+  <line x1="130" y1="501" x2="160" y2="501" stroke="#388bfd" stroke-width="2.2"/>
+  <text x="166" y="505" fill="#cdd9e5" font-size="12">Reno</text>
+
+  <line x1="260" y1="501" x2="290" y2="501" stroke="#3fb950" stroke-width="2.2"/>
+  <text x="296" y="505" fill="#cdd9e5" font-size="12">CUBIC</text>
+
+  <line x1="400" y1="501" x2="430" y2="501" stroke="#f0883e" stroke-width="2.2"/>
+  <text x="436" y="505" fill="#cdd9e5" font-size="12">BBR v1</text>
+
+  <line x1="550" y1="501" x2="580" y2="501" stroke="#a371f7" stroke-width="2.2" stroke-dasharray="8,3"/>
+  <text x="586" y="505" fill="#cdd9e5" font-size="12">BBR v3</text>
+</svg>
